@@ -1,14 +1,13 @@
 # Amoebe_RWTH_IAM
-Hallo!
+Hello!
 
-Das Programm erstellt eine Kopie des Bildes mit dem Namen „result“, bei der die Lage des Massenmittelpunkts mit einem roten Kreuz markiert ist.
-Die Koordinaten lauten (1598, 1339) (in Pixel)
+The program creates a copy of the image named "result" with the center of mass marked with a red cross.
+The coordinates are given in pixels and are (1598, 1339).
 
-Arbeitsprinzip
-Das Prinzip ist sehr einfach.
-Das Programm prüft zunächst die Farbe jedes Pixels. 
-Ist das Pixel „gelblich“ (d.h. liegt der Farbwert im Bereich typischer Werte für Farbe „gelb“) setzt die Funktion cv2.inRange() seine Farbe auf weiß, ansonsten: auf schwarz(bw picture.png). 
-Auf diese Weise wird ein Bild erstellt, das viel einfacher zu verarbeiten ist (zumindest mit den Methoden, die ich gefunden habe). 
-Das Programm geht dann das Schwarzweißbild durch und prüft auf weiße Pixel. 
-Dann berechnet das Programm unter Verwendung jedes weißen Pixels als Körper mit Masse 1 die Koordinaten des Massenmittelpunkts Xj = (Σmi*xij) / (Σmi).
-
+The Working Principle
+It's as simple as it gets!
+The program first checks the color of each pixel.
+If the pixel is "yellowish" (i.e. the color value is in the range of typical values for the color "yellow"), the cv2.inRange() method sets its color to white, otherwise to black(bw picture.png).
+This creates an image that is much easier to process (at least with the methods I've found).
+The program then goes through the black and white image, checking for white pixels.
+Then, using each white pixel as a mass 1 body, the program calculates the coordinates of the center of mass Xj = (Σmi*xij) / (Σmi). 
